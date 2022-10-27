@@ -45,6 +45,14 @@ main {
 	border-radius: 10px;
 }
 
+.currentCalculation {
+	display: flex;
+	width: 360px;
+	height: 75px;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
 .buttonGrid {
 	display: grid;
 	gap: 1rem;
@@ -74,4 +82,9 @@ button {
 h2 {
 	color: rgb(201, 201, 201);
 	text-align: center;
+}
+
+.printCurrentCalculation {
+	font-size: 48px;
+	font-size: bold;
 }

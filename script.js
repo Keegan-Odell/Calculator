@@ -18,11 +18,17 @@ const divideSign = document.querySelector("#divideSign");
 const plusOrMinus = document.querySelector("#plusOrMinus");
 const clear = document.querySelector("#clear");
 const clearAll = document.querySelector("#clearAll");
+const calculationContainer = document.querySelector("#calculationContainer");
+let a = "";
+let b = "";
 
 //This group of functions adds event listeners to each button for when they are clicked
 
-zero.addEventListener("click", () => {
-	console.log(0);
+zeroNum = zero.addEventListener("click", () => {
+	const content = document.createElement("div");
+	content.classList.add("printCurrentCalculation");
+	content.textContent = 0;
+	calculationContainer.appendChild(content);
 });
 
 one.addEventListener("click", () => {
