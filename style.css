@@ -24,22 +24,25 @@ main {
 }
 
 .calculator {
-	width: 400px;
+	width: 380px;
 	height: auto;
 	background-color: darkslategray;
-	padding: 20px;
+	padding: 30px;
+	border-radius: 10px;
 }
 
 .screen {
-	width: 404px;
-	height: 110px;
+	width: 380px;
+	height: 130px;
 	background-color: darkgray;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
+	border-radius: 10px;
 }
 
 .lastEquation {
 	height: 38%;
 	background-color: darkgray;
+	border-radius: 10px;
 }
 
 .buttonGrid {
@@ -57,6 +60,7 @@ button {
 	padding: 15px;
 	font-size: 20px;
 	color: white;
+	border-radius: 10px;
 }
 
 .buttonRed {
