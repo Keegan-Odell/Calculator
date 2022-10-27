@@ -1,0 +1,73 @@
+body {
+	box-sizing: border-box;
+	background-color: #222121;
+}
+
+header {
+	width: auto;
+	height: 10vh;
+}
+
+h1 {
+	color: rgb(201, 201, 201);
+	text-align: center;
+	font-size: 80px;
+	margin-top: 15px;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: 80vh;
+}
+
+.calculator {
+	width: 400px;
+	height: auto;
+	background-color: darkslategray;
+	padding: 20px;
+}
+
+.screen {
+	width: 404px;
+	height: 110px;
+	background-color: darkgray;
+	margin-bottom: 20px;
+}
+
+.lastEquation {
+	height: 38%;
+	background-color: darkgray;
+}
+
+.buttonGrid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gridColSpan2 {
+	grid-column: span 2;
+	background-color: rgb(60, 10, 82);
+}
+
+button {
+	padding: 15px;
+	font-size: 20px;
+	color: white;
+}
+
+.buttonRed {
+	background-color: rgb(95, 3, 3);
+}
+
+.buttonPurple {
+	background-color: rgb(60, 10, 82);
+}
+
+h2 {
+	color: rgb(201, 201, 201);
+	text-align: center;
+}
