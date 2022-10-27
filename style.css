@@ -33,24 +33,28 @@ main {
 
 .screen {
 	width: 383px;
-	height: 130px;
+	min-height: 130px;
 	background-color: darkgray;
 	margin-bottom: 30px;
 	border-radius: 10px;
 }
 
 .lastEquation {
-	height: 38%;
+	min-height: 50px;
+	width: 360px;
 	background-color: darkgray;
 	border-radius: 10px;
+	flex-grow: 1;
 }
 
 .currentCalculation {
 	display: flex;
 	width: 360px;
-	height: 75px;
+	min-height: 75px;
 	justify-content: flex-end;
 	align-items: flex-end;
+	flex-wrap: wrap;
+	flex-grow: 1;
 }
 
 .buttonGrid {
