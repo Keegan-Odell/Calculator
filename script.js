@@ -20,8 +20,8 @@ const clear = document.querySelector("#clear");
 const clearAll = document.querySelector("#clearAll");
 const calculationContainer = document.querySelector("#calculationContainer");
 const calculationChildren = calculationContainer.childNodes;
-let a = "";
-let b = "";
+let a;
+let b;
 
 //This group of functions adds event listeners to each button for when they are clicked
 
@@ -114,9 +114,11 @@ equalSign.addEventListener("click", () => {
 	console.log(a);
 });
 
-//Function to loop through and check how many numbers (n) are in the number to calculate
-//let a = "hi";
+//Store number function for first number
 
 function storeNumber() {
-	let a = document.getElementById("test").innerHTML;
+	a = document.getElementById("test").innerHTML;
+	return a;
 }
+
+function clearNumbers() {}
