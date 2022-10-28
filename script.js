@@ -87,6 +87,11 @@ plusOrMinus.addEventListener("click", () => {
 //These equation functions which will store the 1st number and mathematical sign and prepare for the 2nd number input
 
 plusSign.addEventListener("click", storeNumber);
+plusSign.addEventListener("click", clearNumbers);
+plusSign.addEventListener("click", () => {
+	let paragraph = document.getElementById("lastCalc");
+	paragraph.textContent += `${a} +`;
+});
 
 minusSign.addEventListener("click", () => {
 	console.log("-");
@@ -102,9 +107,7 @@ divideSign.addEventListener("click", () => {
 
 //This is where the calculations happen and where the clear and clear all functions appear
 
-clear.addEventListener("click", () => {
-	console.log("clear");
-});
+clear.addEventListener("click", clearNumbers);
 
 clearAll.addEventListener("click", () => {
 	console.log("clearALL");
@@ -114,11 +117,15 @@ equalSign.addEventListener("click", () => {
 	console.log(a);
 });
 
-//Store number function for first number
+//Functions for certain tasks done on button clicks
 
 function storeNumber() {
 	a = document.getElementById("test").innerHTML;
 	return a;
 }
 
-function clearNumbers() {}
+function clearNumbers() {
+	let paragraph = document.getElementById("test").innerHTML;
+	let clearNums = paragraph.replace(/[^a-z^A-Z]/g, "");
+	document.getElementById("test").innerHTML = clearNums;
+}
