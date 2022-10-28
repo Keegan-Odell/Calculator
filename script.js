@@ -19,65 +19,74 @@ const plusOrMinus = document.querySelector("#plusOrMinus");
 const clear = document.querySelector("#clear");
 const clearAll = document.querySelector("#clearAll");
 const calculationContainer = document.querySelector("#calculationContainer");
+const calculationChildren = calculationContainer.childNodes;
 let a = "";
 let b = "";
 
 //This group of functions adds event listeners to each button for when they are clicked
 
 zeroNum = zero.addEventListener("click", () => {
-	const content = document.createElement("div");
-	content.classList.add("printCurrentCalculation");
-	content.textContent = 0;
-	calculationContainer.appendChild(content);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "0";
 });
 
 one.addEventListener("click", () => {
-	console.log(1);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "1";
 });
 
 two.addEventListener("click", () => {
-	console.log(2);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "2";
 });
 
 three.addEventListener("click", () => {
-	console.log(3);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "3";
 });
 
 four.addEventListener("click", () => {
-	console.log(4);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "4";
 });
 
 five.addEventListener("click", () => {
-	console.log(5);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "5";
 });
 
 six.addEventListener("click", () => {
-	console.log(6);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "6";
 });
 
 seven.addEventListener("click", () => {
-	console.log(7);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "7";
 });
 
 eight.addEventListener("click", () => {
-	console.log(8);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "8";
 });
 
 nine.addEventListener("click", () => {
-	console.log(9);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "9";
 });
 
 decimal.addEventListener("click", () => {
-	console.log(".");
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += ".";
 });
 
-equalSign.addEventListener("click", () => {
-	console.log("=");
+plusOrMinus.addEventListener("click", () => {
+	console.log("+/-");
 });
 
-plusSign.addEventListener("click", () => {
-	console.log("+");
-});
+//These equation functions which will store the 1st number and mathematical sign and prepare for the 2nd number input
+
+plusSign.addEventListener("click", storeNumber);
 
 minusSign.addEventListener("click", () => {
 	console.log("-");
@@ -91,9 +100,7 @@ divideSign.addEventListener("click", () => {
 	console.log("/");
 });
 
-plusOrMinus.addEventListener("click", () => {
-	console.log("+/-");
-});
+//This is where the calculations happen and where the clear and clear all functions appear
 
 clear.addEventListener("click", () => {
 	console.log("clear");
@@ -103,4 +110,13 @@ clearAll.addEventListener("click", () => {
 	console.log("clearALL");
 });
 
-//This is where the calculations happen
+equalSign.addEventListener("click", () => {
+	console.log(a);
+});
+
+//Function to loop through and check how many numbers (n) are in the number to calculate
+//let a = "hi";
+
+function storeNumber() {
+	let a = document.getElementById("test").innerHTML;
+}

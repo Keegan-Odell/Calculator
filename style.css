@@ -90,5 +90,9 @@ h2 {
 
 .printCurrentCalculation {
 	font-size: 48px;
+	min-width: 360px;
+	height: auto;
 	font-size: bold;
+	word-wrap: break-word;
+	direction: rtl;
 }
