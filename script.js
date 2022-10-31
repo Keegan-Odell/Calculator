@@ -22,6 +22,9 @@ const calculationContainer = document.querySelector("#calculationContainer");
 const calculationChildren = calculationContainer.childNodes;
 let a;
 let b;
+let equation;
+let sign;
+let answer;
 
 //This group of functions adds event listeners to each button for when they are clicked
 
@@ -81,7 +84,8 @@ decimal.addEventListener("click", () => {
 });
 
 plusOrMinus.addEventListener("click", () => {
-	console.log("+/-");
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += "-";
 });
 
 //These equation functions which will store the 1st number and mathematical sign and prepare for the 2nd number input
@@ -90,31 +94,51 @@ plusSign.addEventListener("click", storeNumber);
 plusSign.addEventListener("click", clearNumbers);
 plusSign.addEventListener("click", () => {
 	let paragraph = document.getElementById("lastCalc");
-	paragraph.textContent += `${a} +`;
+	paragraph.textContent += `${a} + `;
+	sign = "+";
+	return sign;
 });
 
+minusSign.addEventListener("click", storeNumber);
+minusSign.addEventListener("click", clearNumbers);
 minusSign.addEventListener("click", () => {
-	console.log("-");
+	let paragraph = document.getElementById("lastCalc");
+	paragraph.textContent += `${a} - `;
+	sign = "-";
+	return sign;
 });
 
+multiplicationSign.addEventListener("click", storeNumber);
+multiplicationSign.addEventListener("click", clearNumbers);
 multiplicationSign.addEventListener("click", () => {
-	console.log("*");
+	let paragraph = document.getElementById("lastCalc");
+	paragraph.textContent += `${a} * `;
+	sign = "*";
+	return sign;
 });
 
+divideSign.addEventListener("click", storeNumber);
+divideSign.addEventListener("click", clearNumbers);
 divideSign.addEventListener("click", () => {
-	console.log("/");
+	let paragraph = document.getElementById("lastCalc");
+	paragraph.textContent += `${a} ÷ `;
+	sign = "/";
+	return sign;
 });
 
 //This is where the calculations happen and where the clear and clear all functions appear
 
 clear.addEventListener("click", clearNumbers);
 
-clearAll.addEventListener("click", () => {
-	console.log("clearALL");
-});
+clearAll.addEventListener("click", clearEverything);
 
+equalSign.addEventListener("click", logB);
+equalSign.addEventListener("click", writeEquation);
+equalSign.addEventListener("click", calculate);
+equalSign.addEventListener("click", clearEverything);
 equalSign.addEventListener("click", () => {
-	console.log(a);
+	let paragraph = document.getElementById("test");
+	paragraph.textContent += `${answer}`;
 });
 
 //Functions for certain tasks done on button clicks
@@ -128,4 +152,26 @@ function clearNumbers() {
 	let paragraph = document.getElementById("test").innerHTML;
 	let clearNums = paragraph.replace(/[^a-z^A-Z]/g, "");
 	document.getElementById("test").innerHTML = clearNums;
+}
+
+function clearEverything() {
+	clearNumbers();
+	let paragraph = document.getElementById("lastCalc").innerHTML;
+	let clearIt = paragraph.replace(/[^a-z^A-Z]/g, "");
+	document.getElementById("lastCalc").innerHTML = clearIt;
+}
+
+function logB() {
+	b = document.getElementById("test").innerHTML;
+	return b;
+}
+
+function writeEquation() {
+	equation = `${a} ${sign} ${b}`;
+	return equation;
+}
+
+function calculate() {
+	answer = eval(equation);
+	return answer;
 }

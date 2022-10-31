@@ -89,10 +89,18 @@ h2 {
 }
 
 .printCurrentCalculation {
+	display: flex;
+	justify-content: flex-end;
 	font-size: 48px;
 	min-width: 360px;
 	height: auto;
 	font-size: bold;
-	word-wrap: break-word;
-	direction: rtl;
+}
+
+.printLastCalc {
+	font-size: 30px;
+	min-width: 360px;
+	height: auto;
+	font-size: bold;
+	padding-left: 5px;
 }
